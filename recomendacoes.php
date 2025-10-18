@@ -52,8 +52,9 @@ else{
                     </ul>
                 </div>
               
-                <h4 class='text-orange mb-3 text-center'>Recomendações Personalizadas</h4>
+                
                 <div class='card_r shadow-lg p-4 border-0 bg-light-orange'>
+                <h1 class='text-orange mb-3 text-center'>Recomendações Personalizadas</h1>
         ";
                 //====================== inicio 1. Qual área você sente mais dificuldade?=================
 
@@ -566,7 +567,6 @@ if ($atrapalha === "falta_concentracao") {
         <tr>
             <td><p><b>Ambientação Sensorial</b></p></td>
             <td><p>Estude sempre no mesmo local e horário. Isso ajuda o cérebro a “entrar no modo estudo” com mais facilidade.</p></td>
-            <td><a href='https://blog.eurekka.me/como-criar-ambiente-de-estudos/' target='_blank' class='btn bg-orange text-white'><p>Ver dica</p></a></td>
         </tr>
     </table>";
 }

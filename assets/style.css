@@ -186,7 +186,7 @@ footer .icon {
 
     .navbar-toggler{
         border-color: #ee7a2b;
-        margin: 0 12%;
+        margin: 0 7%;
     }
 
     /* ======== NAVBAR ======== */
@@ -246,5 +246,16 @@ footer .icon {
         font-size: 1rem;
     }
 
-    
+    footer {
+        flex-direction: column; /* empilha os elementos */
+        padding: 12px 0;       /* menos espaçamento */
+        font-size: 1rem;       /* fonte menor */
+        gap: 12px;             /* menos gap entre itens */
+        text-align: center;    /* centraliza o texto */
+    }
+
+    footer .icon {
+        width: 16px;           /* ícones menores */
+        margin-right: 4px;     
+    }
 }

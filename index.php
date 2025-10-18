@@ -1,5 +1,7 @@
 <?php
 session_start();
+
+include "includes/banco.php";
 include "includes/header.php";
 include "includes/navbar.php";
 ?>
@@ -8,12 +10,56 @@ include "includes/navbar.php";
     <div>
 
         <div class="card_r shadow-lg p-4 border-0 bg-light-orange">
-            <h1 class="fw-bold text-orange mb-4">Bem-vindo ao <span class="text-orange">EducaForms</span>!</h1>
-            <p>
-                Transforme sua forma de estudar com uma plataforma interativa que une <strong>tecnologia e inclusão</strong>.
-            </p>
-            <a href="formulario.php" class="btn bg-orange text-white fw-semibold py-2 px-4 shadow-sm">Começar Agora</a>
-        </div>
+
+            <?php 
+                //se ainda não fez login
+                if (!isset($_SESSION['usuario_id'])) {
+                    echo"
+                    <h1 class='fw-bold text-orange mb-4'>Bem-vindo ao <span class='text-orange'>EducaForms</span>!</h1>
+                    <p>É novo por aqui? Comece agora fazendo o cadastro ou login!</p>
+                    <a href='login.php' class='btn bg-orange text-white fw-semibold py-2 px-4 shadow-sm me-2'>Cadastrar</a>";
+                    
+                }
+
+                //fez login
+                else {
+
+                    $id = $_SESSION['usuario_id'];
+                    
+                    //verifica o nome do usuario
+                    $stmt = $conn->prepare("SELECT nome FROM alunos WHERE id = ?");
+                    $stmt->bind_param("s", $id);
+                    $stmt->execute();
+                    $result = $stmt->get_result();
+
+                    
+                    if($linha = $result->fetch_assoc()) {
+                        $nome = $linha['nome'];
+
+                        //exibe o nome
+                        echo "<h1 class='fw-bold text-orange mb-4'>Bem-vindo de volta, <span class='text-orange'>" . htmlspecialchars($nome) . "</span>!</h1>";
+                        
+                        //verifica se ja respondeu o formulario
+                        $stmt = $conn->prepare("SELECT id FROM estudos WHERE aluno_id = ?");
+                        $stmt->bind_param("s", $id);
+                        $stmt->execute();
+                        $result = $stmt->get_result();
+
+                        //não respondeu o formulario
+                        if ($result->num_rows === 0) {
+                            echo "<p> Ainda não respondeu o formulário?</p>
+                                    <a href='formulario.php' class='btn bg-orange text-white fw-semibold py-2 px-4 shadow-sm'>Começar Agora</a>";
+                        }
+
+                    }
+
+                }
+
+
+                
+
+            ?>
+            </div>
 
         <!-- Seção Sobre Nós -->
         <div class="card_r shadow-lg p-4 border-0 bg-light-orange">
@@ -61,7 +107,7 @@ include "includes/navbar.php";
         <!-- Chamada final -->
         <div class="card_r shadow-lg p-4 border-0 bg-light-orange">
             <h2 class="fw-bold text-orange mb-3">Comece a aprender de forma inteligente 🌟</h2>
-            <p class="lead mb-4">Participe do EducaForms e descubra um novo jeito de estudar com interatividade e propósito.</p>
+            <p>Participe do EducaForms e descubra um novo jeito de estudar com interatividade e propósito.</p>
             <a href="login.php" class="btn bg-orange text-white fw-semibold py-2 px-4 shadow-sm">Acessar minha conta</a>
         </div>
 

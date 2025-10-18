@@ -34,7 +34,6 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 }
 ?>
 
-<main class="d-flex justify-content-center align-items-center" style="min-height: 80vh;">
   <div class="card shadow-lg p-4 border-0 bg-light-orange" style="max-width: 420px; width: 100%;">
     <h2 class="text-center text-orange fw-bold mb-4">Acesse sua conta</h2>
 
@@ -65,23 +64,5 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
       </div>
     </form>
   </div>
-</main>
-
-<script>
-// Ativa validação visual do Bootstrap
-(() => {
-  'use strict';
-  const forms = document.querySelectorAll('.needs-validation');
-  Array.from(forms).forEach(form => {
-    form.addEventListener('submit', event => {
-      if (!form.checkValidity()) {
-        event.preventDefault();
-        event.stopPropagation();
-      }
-      form.classList.add('was-validated');
-    }, false);
-  });
-})();
-</script>
 
 <?php include 'includes/footer.php'; ?>
