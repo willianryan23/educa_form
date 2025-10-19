@@ -41,8 +41,7 @@
     }
 ?>
 
-<main class="d-flex justify-content-center align-items-center" style="min-height: 80vh;">
-    <div class="card shadow-lg p-4 border-0 bg-light-orange" style="max-width: 480px; width: 100%;">
+    <div class="card shadow-lg p-4 border-0 bg-light-orange">
         <h2 class="text-center text-orange fw-bold mb-4">Crie sua conta</h2>
 
         <form method="post" enctype="multipart/form-data" class="needs-validation" novalidate>
@@ -95,6 +94,5 @@
             </div>
         </form>
     </div>
-</main>
 
 <?php include 'includes/footer.php'; ?>

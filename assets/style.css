@@ -112,7 +112,8 @@ footer .icon {
 
 /* ======== CARDS GERAIS ======== */
 .card {
-    margin: 0%;
+    width: 50%; 
+    margin: 1% 25%;
     border-radius: 12px;
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -124,6 +125,7 @@ footer .icon {
 }
 
 .glass-card {
+    width: 80%;
     background: rgba(255, 255, 255, 0.15); /* fundo translúcido */
     backdrop-filter: blur(15px); /* efeito de vidro */
     -webkit-backdrop-filter: blur(15px); /* Safari */
@@ -131,7 +133,7 @@ footer .icon {
     border: 1px solid rgba(255, 255, 255, 0.25);
     box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
     transition: all 0.3s ease;
-    margin: 10% 0;
+    margin: 10% 10%;
 
 }
 
@@ -143,8 +145,8 @@ footer .icon {
 
 
 .card_r {
-    width: 85%;
-    margin: 1% 10% 3% 8%;
+    width: 80%;
+    margin: 1% 10% 3% 10%;
     border-radius: 12px;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
 }
@@ -222,6 +224,7 @@ footer .icon {
     
     }
     .card_r {
+        
     width: 100%;
     margin: 1% 2%;
     border-radius: 12px;

@@ -72,7 +72,7 @@ if (isset($_POST['excluir'])) {
 }
 ?>
 
-  <div class="card shadow-lg p-4 border-0 bg-light-orange" style="max-width: 600px; width: 100%;">
+  <div class="card shadow-lg p-4 border-0 bg-light-orange" >
     <h2 class="text-center text-orange fw-bold mb-4">Meu Perfil</h2>
 
     <!-- Imagem de perfil -->

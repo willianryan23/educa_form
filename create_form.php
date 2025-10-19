@@ -13,7 +13,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $id_usuario = $_SESSION['usuario_id'];
 
     $stmt = $conn->prepare("INSERT INTO estudos (a_d, f_e, t_e, p_e, o_a, aluno_id) VALUES (?, ?, ?, ?, ?, ?)");
-    $stmt->bind_param("sssssi", $dificuldade, $metodo_preferido, $horario_estudo, $prefere, $atrapalha, $id_usuario);
+    $stmt->bind_param("ssssss", $dificuldade, $metodo_preferido, $horario_estudo, $prefere, $atrapalha, $id_usuario);
     $stmt->execute();
     $stmt->close();
 

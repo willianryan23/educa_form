@@ -34,7 +34,7 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 }
 ?>
 
-  <div class="card shadow-lg p-4 border-0 bg-light-orange" style="max-width: 420px; width: 100%;">
+  <div class="card shadow-lg p-4 border-0 bg-light-orange">
     <h2 class="text-center text-orange fw-bold mb-4">Acesse sua conta</h2>
 
     <form method="post" action="" class="needs-validation" novalidate>

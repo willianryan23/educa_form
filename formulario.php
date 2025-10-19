@@ -32,6 +32,7 @@
 
       <!-- Formulário já preenchido (para edição) -->
       <form action="edit_form.php" method="POST" class="needs-validation" novalidate>
+
         <input type="hidden" name="aluno_id" value="<?= htmlspecialchars($id_usuario) ?>">
 
         <!-- Dificuldade -->
