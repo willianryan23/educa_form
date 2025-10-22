@@ -11,8 +11,8 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
     $login = $_POST['login'] ?? '';
     $acesso = $_POST['acesso'] ?? '';
 
-    $stmt = $conn->prepare("SELECT id, senha FROM alunos WHERE id = ?");
-    $stmt->bind_param("s", $login);
+    $stmt = $conn->prepare("SELECT id, email, senha FROM alunos WHERE id = ? OR email = ?");
+    $stmt->bind_param("ss", $login, $login);
     $stmt->execute();
     $result = $stmt->get_result();
 

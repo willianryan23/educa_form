@@ -19,9 +19,54 @@
         $id = $_POST["id"];
         $nome = $_POST["nome"];
         $email = $_POST["email"];
+
+        if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+            echo "<script>
+                alert('Por favor, insira um e-mail válido.');
+                window.location.href = 'cadastro.php';
+            </script>";
+            exit();
+        }
+
         $senha = $_POST["senha"];
+
+        if (!preg_match('/^(?=.*\d)[A-Za-z\d]{8,}$/', $senha)) {
+            echo "<script>
+                alert('A senha deve ter pelo menos 8 caracteres e conter pelo menos um número.');
+                window.location.href = 'cadastro.php';
+            </script>";
+            exit();
+        }
+
+
         $imagem = $_FILES['imagem']['name'];
         $caminho = "assets/uploads/" . $imagem;
+
+        if (empty($id) || empty($nome) || empty($email) || empty($senha) || empty($caminho) || empty($imagem)) {
+            echo "<script>
+                alert('Por favor, preencha todos os campos obrigatórios.');
+                window.location.href = 'cadastro.php';
+            </script>";
+            exit();
+        }
+
+        // Verifica se já existe usuário com mesmo id ou email
+        $stmt = $conn->prepare("SELECT id, email FROM alunos WHERE id = ? OR email = ?");
+        $stmt->bind_param("ss", $id, $email);
+        $stmt->execute();
+        $stmt->store_result();
+
+        if ($stmt->num_rows > 0) {
+            echo "<script>
+                alert('Nome de usuário já cadastrado. Escolha outro.');
+                window.location.href = 'cadastro.php';
+            </script>";
+            $stmt->close();
+            exit();
+        }
+        $stmt->close();
+
+
 
         // Move o arquivo e insere no banco
         if (move_uploaded_file($_FILES['imagem']['tmp_name'], $caminho)) {
@@ -79,7 +124,7 @@
             <!-- Imagem -->
             <div class="mb-3">
                 <label class="form-label">Imagem</label>
-                <input type="file" name="imagem" accept="image/*" class="form-control">
+                <input type="file" name="imagem" accept="image/*" class="form-control" required>
             </div>
 
             <!-- Botão -->

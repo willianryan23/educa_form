@@ -336,6 +336,7 @@ if ($metodo_preferido === "texto") {
 //====================== recomendações para vídeo ========================
 if ($metodo_preferido === "video") {
     echo "
+        <hr>
         <h4 class='text-orange mb-3'>Prefere estudar por Vídeos Explicativos</h4>
         <table style='width: 100%; border-collapse: collapse;'>
             <tr style='background-color: #fff3e0;'>
@@ -346,7 +347,6 @@ if ($metodo_preferido === "video") {
             <tr>
                 <td style='padding: 10px;'><p><b>Método de Anotação em 2 Colunas</b></p></td>
                 <td style='padding: 10px;'><p>No lado esquerdo anote o que o professor explica e, no direito, dúvidas ou exemplos próprios.</p></td>
-                <td><a href='https://estudeemcasa.educacao.pe.gov.br/metodo-de-anotacao' class='btn rec bg-orange text-white' target='_blank'><p>Ver exemplo</p></a></td>
             </tr>
             <tr>
                 <td style='padding: 10px;'><p><b>Aprendizado Multimodal</b></p></td>
@@ -359,6 +359,7 @@ if ($metodo_preferido === "video") {
 //====================== recomendações para exercício ========================
 if ($metodo_preferido === "exercicio") {
     echo "
+        <hr>
         <h4 class='text-orange mb-3'>Prefere estudar por Exercícios Práticos</h4>
         <table style='width: 100%; border-collapse: collapse;'>
             <tr style='background-color: #fff3e0;'>
@@ -369,12 +370,11 @@ if ($metodo_preferido === "exercicio") {
             <tr>
                 <td style='padding: 10px;'><p><b>Prática Intercalada</b></p></td>
                 <td style='padding: 10px;'><p>Alterne tipos de questões, como álgebra e geometria, para treinar o cérebro em diferentes conexões.</p></td>
-                <td><a href='https://www.educamaisbrasil.com.br/enem/noticias/como-usar-a-pratica-intercalada-nos-estudos' class='btn rec bg-orange text-white' target='_blank'><p>Ver método</p></a></td>
             </tr>
             <tr>
                 <td style='padding: 10px;'><p><b>Teste Prático (Practice Testing)</b></p></td>
                 <td style='padding: 10px;'><p>Simule condições reais de prova para melhorar o desempenho.</p></td>
-                <td><a href='https://guiadoestudante.abril.com.br/estudo/metodo-de-testes-praticos/' class='btn rec bg-orange text-white' target='_blank'><p>Ver dica</p></a></td>
+                <td><a href='https://studyworkgrow.com/the-power-of-practice-tests-why-theyre-helpful-for-exam-success/' class='btn rec bg-orange text-white' target='_blank'><p>Ver método</p></a></td>
             </tr>
         </table>";
 }
@@ -382,6 +382,7 @@ if ($metodo_preferido === "exercicio") {
 //====================== recomendações para mapa ========================
 if ($metodo_preferido === "mapa") {
     echo "
+        <hr>
         <h4 class='text-orange mb-3'>Prefere estudar por Mapas Mentais e Flashcards</h4>
         <table style='width: 100%; border-collapse: collapse;'>
             <tr style='background-color: #fff3e0;'>
@@ -609,7 +610,7 @@ if ($atrapalha === "preguica") {
         <tr>
             <td style='padding: 10px;'><p><b>Gamificação</b></p></td>
             <td style='padding: 10px;'><p>Transforme o estudo em um jogo com recompensas e desafios. Use apps como Habitica para aumentar a motivação.</p></td>
-            <td><a href='https://habitica.com/' target='_blank' class='btn rec bg-orange text-white'><p>Ver app</p></a></td>
+            <td><a href='https://habitica.com/' target='_blank' class='btn rec bg-orange text-white'><p>Ver método</p></a></td>
         </tr>
         <tr>
             <td style='padding: 10px;'><p><b>Metas SMART</b></p></td>

@@ -10,7 +10,7 @@ body {
 hr {
     color: #ff8a00;
     height: 5px;
-    width: 96%;
+    width: 90%;
     margin: 5% 5%;
 }
 
@@ -201,6 +201,10 @@ footer .icon {
         margin-top: 50%;
 
     }
+
+    .navbar-nav .nav-link {
+    font-size: 1rem;
+}
 
     /* ========= cards ========= */
     .card {
