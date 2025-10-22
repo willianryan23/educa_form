@@ -52,8 +52,6 @@
 <!-- Imagem de fundo e container principal -->
 <main>
 
-    <img src="assets/images/Cópia de Protótipo de computador website delicado e feminino rosa e azul (1).png" class="background-shape" alt="Formas de fundo">
-  <div class="glass-card shadow-lg border-0 p-4" >
 
          
 

@@ -1,4 +1,3 @@
- </div>
 </main>
 
     <!-- Footer fixo na base -->

@@ -112,8 +112,8 @@ if (isset($_POST['excluir'])) {
 
       <!-- Botões -->
       <div class="d-flex justify-content-between mt-4">
-        <button type="submit" name="atualizar" class="btn bg-orange text-white fw-semibold shadow-sm px-4">Salvar alterações</button>
-        <button type="submit" name="excluir" class="btn btn-danger fw-semibold shadow-sm px-4" 
+        <button type="submit" name="atualizar" class="btn bg-orange text-white fw-semibold shadow-sm px-4" style="width: 40% !important; ">Salvar alterações</button>
+        <button type="submit" name="excluir" class="btn btn-danger fw-semibold shadow-sm px-4" style="width: 40% !important; " 
           onclick="return confirm('Tem certeza que deseja apagar sua conta? Essa ação não pode ser desfeita!');">
           Excluir conta
         </button>

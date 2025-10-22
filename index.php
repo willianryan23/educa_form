@@ -59,7 +59,7 @@ include "includes/navbar.php";
                 
 
             ?>
-            </div>
+        </div>
 
         <!-- Seção Sobre Nós -->
         <div class="card_r shadow-lg p-4 border-0 bg-light-orange">
