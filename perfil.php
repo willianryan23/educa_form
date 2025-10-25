@@ -31,6 +31,15 @@ if (isset($_POST['atualizar'])) {
     $novoNome = $_POST['nome'];
     $novoEmail = $_POST['email'];
     $novaSenha = $_POST['senha'];
+
+    if (!preg_match('/^(?=.*\d)[A-Za-z\d]{8,}$/', $novaSenha)) {
+        echo "<script>
+            alert('A senha deve ter pelo menos 8 caracteres e conter pelo menos um número.');
+            window.location.href = 'perfil.php';
+        </script>";
+        exit();
+    }
+
     $novaImagem = $usuario['imagem']; // valor atual por padrão
 
     // Verifica se uma nova imagem foi enviada

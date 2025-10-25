@@ -66,7 +66,7 @@ include "includes/navbar.php";
             <h2 class="fw-bold text-orange mb-3">Sobre Nós</h2>
             <p>
                 O <strong>EducaForms</strong> é um projeto que transforma o conteúdo escolar em <strong>formulários interativos</strong> 
-                para facilitar o estudo dos alunos. Em vez de estudar apenas por textos longos, o estudante responde perguntas, 
+                para facilitar o estudo dos alunos. ao invés de estudar apenas por textos longos, o estudante responde perguntas, 
                 faz atividades e recebe <strong>feedback imediato</strong>, tornando o aprendizado mais dinâmico e eficiente.
             </p>
             <p>
@@ -88,13 +88,13 @@ include "includes/navbar.php";
             
                 <div class="card p-3 shadow-sm border-0">
                     <h5 class="fw-bold text-orange mb-2">📚 Formulário Prático</h5>
-                    <p>Os alunos respondem um formulários que que busca aprender sobre seus hábitos de estudos para ajudar da melhor forma possível.</p>
+                    <p>Os alunos respondem um formulário que busca aprender sobre seus hábitos de estudos para ajudar da melhor forma possível.</p>
                 </div>
 
             
                 <div class="card p-3 shadow-sm border-0">
                     <h5 class="fw-bold text-orange mb-2">💡 Feedback Imediato</h5>
-                    <p>Ao responder o formulário, o aluno recebe retorno automático, entendendo onde precisa melhorar e reforçar os seus estudos, e recebe dicas de materiais para estudos.</p>
+                    <p>Ao responder o formulário, o aluno recebe retorno automático, entendendo onde precisa melhorar e reforçar os seus estudos, e recebe dicas de materiais para os estudos.</p>
                 </div>
             
                 <div class="card p-3 shadow-sm border-0">
@@ -103,6 +103,7 @@ include "includes/navbar.php";
                 </div>
             </div>
         </div>
+
 
         <!-- Chamada final -->
         <div class="card_r shadow-lg p-4 border-0 bg-light-orange">
